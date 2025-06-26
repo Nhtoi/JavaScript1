@@ -45,10 +45,11 @@ function renderButtons(choicesArray, correctAnswer) {
     const options = document.getElementById("options"); // Container for the multiple-choice buttons
     for (let i = 0; i < choicesArray.length; i++){
         optionButtons = document.createElement(`button`)
-        optionButtons.setAttribute(name, choicesArray[i])
+        optionButtons.setAttribute("name", choicesArray[i])
         optionButtons.setAttribute("value", choicesArray[i])
         optionButtons.textContent = choicesArray[i]
         optionButtons.addEventListener("click", buttonHandler)
+        console.log(optionButtons)
         options.append(optionButtons)
     }
 }
